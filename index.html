@@ -1,0 +1,1096 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clínica dental en Logroño | Arrivadent</title>
+<meta name="description" content="Clínica dental en Logroño con atención personalizada en odontología general y estética dental. Valorada con 5,0★ por nuestros pacientes (26 reseñas en Google). Escríbenos por WhatsApp." />
+<meta name="theme-color" content="#191714" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="canonical" href="https://clinicaarrivadent.es/" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Clínica Arrivadent",
+  "url": "https://clinicaarrivadent.es/",
+  "image": "https://clinicaarrivadent.es/logo.png",
+  "telephone": "+34941700212",
+  "email": "info@clinicaarrivadent.es",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Burgos 100, bajo 3",
+    "addressLocality": "Logroño",
+    "addressRegion": "La Rioja",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "09:30", "closes": "16:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "09:30", "closes": "13:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "16:30", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "15:00" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "26"
+  }
+}
+</script>
+<style>
+body{margin:0;background:#FAF8F5}
+.page [hidden]{display:none !important}
+.quiz-run{display:flex;flex-direction:column;flex:1}
+.quiz-q h3:focus,.res-title:focus{outline:none}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit}
+
+.page{
+  --ink:#191714;--ink-2:#221E1A;--paper:#FAF8F5;--paper-soft:#F0ECE5;
+  --brown:#7A5B3F;--brown-light:#ECE1D3;--grey:#6B655C;--line:#E2DCD1;
+  --gold:#D9B98A;--star:#A9803F;--muted-dark:#BDB5A8;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip;
+}
+.page *{box-sizing:border-box}
+.page svg{display:block;flex:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.page :where(h1,h2,h3,h4){font-family:'Fraunces',Georgia,serif;font-weight:500;letter-spacing:-.02em;line-height:1.05;margin:0}
+.page :where(p){margin:0}
+.page em{font-style:italic;font-weight:400}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--brown)}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+.on-dark .eyebrow{color:var(--gold)}
+
+/* BUTTONS */
+.btn{position:relative;display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:6px 7px 6px 24px;border-radius:999px;font-weight:600;font-size:15px;line-height:1;overflow:hidden;isolation:isolate;cursor:pointer;white-space:nowrap;transition:transform .45s var(--ease),box-shadow .45s var(--ease),background .3s,color .3s,border-color .3s}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.32) 50%,transparent 70%);transform:translateX(-130%);transition:transform .9s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:hover::before{transform:translateX(130%)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn:focus-visible,.tcard:focus-visible,.main-nav a:focus-visible,.burger:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.btn-ico{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;transition:transform .5s var(--ease)}
+.btn:hover .btn-ico{transform:rotate(-45deg)}
+.btn-dark{background:var(--ink);color:#fff;box-shadow:0 12px 30px -12px rgba(25,23,20,.55)}
+.btn-dark:hover{color:#fff;box-shadow:0 20px 40px -14px rgba(25,23,20,.6)}
+.btn-dark .btn-ico{background:var(--paper);color:var(--ink)}
+.btn-light{background:var(--paper);color:var(--ink)}
+.btn-light:hover{color:var(--ink);box-shadow:0 20px 44px -14px rgba(217,185,138,.55)}
+.btn-light .btn-ico{background:var(--ink);color:var(--gold)}
+.btn-ghost{padding:6px 26px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.04);color:#fff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.btn-ghost:hover{color:#fff;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5)}
+.btn-outline{padding:6px 26px;border:1px solid var(--ink);color:var(--ink);background:transparent}
+.btn-outline::before{background:var(--ink);transform:translateY(101%);transition:transform .5s var(--ease)}
+.btn-outline:hover{color:#fff}
+.btn-outline:hover::before{transform:translateY(0)}
+.btn-sm{min-height:44px;font-size:14px;padding-left:20px;gap:12px}
+.btn-sm .btn-ico{width:32px;height:32px}
+.btn-lg{min-height:58px;font-size:16px}
+.btn-lg .btn-ico{width:44px;height:44px}
+.btn-lg.btn-ghost,.btn-lg.btn-outline{padding:6px 30px}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(250,248,245,.78);backdrop-filter:saturate(1.4) blur(18px);-webkit-backdrop-filter:saturate(1.4) blur(18px);border-bottom:1px solid transparent;transition:background .4s,border-color .4s,box-shadow .4s}
+.site-header.is-scrolled{background:rgba(250,248,245,.92);border-bottom-color:var(--line);box-shadow:0 10px 30px -22px rgba(25,23,20,.35)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px;transition:height .4s var(--ease)}
+.is-scrolled .header-inner{height:70px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:42px;height:42px;border-radius:13px;background:var(--ink);color:var(--gold);display:grid;place-items:center;transition:transform .6s var(--ease)}
+.logo:hover .logo-mark{transform:rotate(-10deg)}
+.logo-text{display:flex;flex-direction:column;font-family:'Fraunces',Georgia,serif;font-size:21px;font-weight:600;letter-spacing:.05em;line-height:1}
+.logo-text small{font-family:'Inter',sans-serif;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-top:6px}
+.main-nav{display:flex;gap:4px;padding:5px;border-radius:999px;background:rgba(240,236,229,.75);border:1px solid var(--line)}
+.main-nav a{padding:10px 18px;border-radius:999px;font-size:14px;font-weight:500;transition:background .3s,box-shadow .3s}
+.main-nav a:hover{background:#fff;box-shadow:0 2px 12px rgba(25,23,20,.07)}
+.header-actions{display:flex;align-items:center;gap:18px}
+.header-phone{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600}
+.header-phone:hover{color:var(--brown)}
+.burger{display:none;position:relative;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;padding:0}
+.burger span{position:absolute;left:14px;right:14px;height:1.5px;background:var(--ink);transition:transform .4s var(--ease),top .4s var(--ease)}
+.burger span:first-child{top:18px}
+.burger span:last-child{top:26px}
+.burger.is-open span:first-child{top:22px;transform:rotate(45deg)}
+.burger.is-open span:last-child{top:22px;transform:rotate(-45deg)}
+.mobile-nav{display:none;flex-direction:column;padding:8px 20px 28px;border-top:1px solid var(--line);animation:drop .45s var(--ease) both}
+.mobile-nav a.m-link{display:flex;justify-content:space-between;align-items:center;padding:16px 4px;font-family:'Fraunces',Georgia,serif;font-size:26px;border-bottom:1px solid var(--line)}
+.mobile-nav .btn{margin-top:22px;justify-content:space-between}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;padding:96px 0 136px}
+.grain{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.3px);background-size:4px 4px;-webkit-mask-image:linear-gradient(to bottom,#000,transparent 90%);mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+.hero-glow{position:absolute;width:760px;height:760px;right:-120px;top:-160px;border-radius:50%;background:radial-gradient(closest-side,rgba(122,91,63,.5),transparent);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:72px;align-items:center}
+.hero h1{font-size:clamp(42px,5.6vw,80px);line-height:1.02;margin:24px 0 26px}
+.hero h1 em{color:var(--gold)}
+.hero .lead{font-size:18px;color:#CFC8BD;max-width:48ch}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin:38px 0 46px}
+.hero-proof{display:flex;align-items:center;gap:18px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);max-width:520px}
+.avatars{display:flex}
+.avatars span{width:42px;height:42px;border-radius:50%;border:2px solid var(--ink);margin-left:-12px;display:grid;place-items:center;font-size:12px;font-weight:600;color:#fff;background:var(--brown)}
+.avatars span:first-child{margin-left:0}
+.avatars span:nth-child(2){background:#3A2F25}
+.avatars span:nth-child(3){background:#8B6A47}
+.proof-text{display:flex;flex-direction:column;gap:2px;font-size:14px;color:#CFC8BD}
+.proof-text .stars{color:var(--gold);letter-spacing:2px}
+.proof-text strong{color:#fff;letter-spacing:0;margin-left:6px}
+
+.hero-visual{position:relative;height:600px}
+.arch{position:absolute;top:0;bottom:0;left:64px;right:40px;border-radius:320px 320px 28px 28px;background:linear-gradient(172deg,#3A3028 0%,#221E1A 72%);border:1px solid rgba(255,255,255,.1);overflow:hidden;box-shadow:0 50px 90px -40px rgba(0,0,0,.7)}
+.ring{position:absolute;left:50%;top:44%;border-radius:50%;border:1px solid rgba(217,185,138,.16);transform:translate(-50%,-50%)}
+.ring-1{width:220px;height:220px}
+.ring-2{width:360px;height:360px;border-color:rgba(217,185,138,.1)}
+.ring-3{width:520px;height:520px;border-color:rgba(217,185,138,.06)}
+.arch-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:40px;text-align:center}
+.arch-inner .tooth{color:var(--gold);animation:bob 6s ease-in-out infinite}
+.ph-label{font-size:12px;letter-spacing:.08em;color:#A89F92;border:1px dashed rgba(255,255,255,.22);border-radius:999px;padding:8px 16px}
+.float-card{position:absolute;display:flex;align-items:center;gap:14px;padding:16px 20px 16px 16px;border-radius:20px;background:rgba(250,248,245,.97);color:var(--ink);box-shadow:0 30px 60px -24px rgba(0,0,0,.6);animation:floaty 7s ease-in-out infinite}
+.fc-1{top:70px;left:0}
+.fc-2{bottom:96px;right:0;animation-delay:-3.5s}
+.fc-ico{width:44px;height:44px;border-radius:14px;background:var(--ink);color:var(--gold);display:grid;place-items:center}
+.fc-big{font-family:'Fraunces',Georgia,serif;font-size:34px;line-height:1;letter-spacing:-.03em}
+.fc-text{display:flex;flex-direction:column;gap:3px;font-size:13px;color:var(--grey);line-height:1.3}
+.fc-text strong{font-size:15px;color:var(--ink)}
+.fc-stars{color:var(--star);letter-spacing:1.5px;font-size:13px}
+.float-chip{position:absolute;left:96px;bottom:26px;display:flex;align-items:center;gap:10px;padding:11px 18px;border-radius:999px;background:rgba(25,23,20,.72);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-size:13px;color:#fff}
+.live{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 2.2s infinite}
+
+.hero-anim{opacity:0;animation:rise 1.1s var(--ease) forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.3s}.d4{animation-delay:.45s}.d5{animation-delay:.6s}
+
+/* STATS */
+.stats{position:relative;z-index:2;margin-top:-76px}
+.stats-card{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:0 40px 70px -40px rgba(25,23,20,.35);overflow:hidden}
+.stat{display:flex;flex-direction:column;gap:8px;padding:34px 34px 30px;transition:background .4s}
+.stat:hover{background:var(--paper)}
+.stat + .stat{border-left:1px solid var(--line)}
+.stat-num{font-family:'Fraunces',Georgia,serif;font-size:54px;line-height:1;letter-spacing:-.035em;color:var(--ink)}
+.stat-num small{font-size:26px;color:var(--star);margin-left:4px;letter-spacing:0}
+.stat-label{font-size:14px;color:var(--grey);line-height:1.45}
+
+/* SECTIONS */
+.section{padding:128px 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:56px}
+.section-head h2{font-size:clamp(36px,4.3vw,60px);margin-top:18px;max-width:15ch}
+.section-head h2 em{color:var(--brown)}
+.section-head p{max-width:42ch;font-size:17px;color:var(--grey)}
+
+/* BENTO */
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.tcard{position:relative;display:flex;flex-direction:column;min-height:310px;padding:28px;border-radius:26px;background:#fff;border:1px solid var(--line);overflow:hidden;transition:transform .55s var(--ease),box-shadow .55s var(--ease),border-color .4s}
+.tcard:hover{transform:translateY(-6px);box-shadow:0 34px 60px -32px rgba(25,23,20,.38);border-color:transparent;color:inherit}
+.tcard-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:auto}
+.tcard-ico{width:54px;height:54px;border-radius:17px;background:var(--brown-light);color:var(--brown);display:grid;place-items:center;transition:background .4s,color .4s,transform .6s var(--ease)}
+.tcard:hover .tcard-ico{background:var(--ink);color:var(--gold);transform:rotate(-8deg) scale(1.06)}
+.tcard-num{font-family:'Fraunces',Georgia,serif;font-size:15px;color:var(--grey)}
+.tcard h3{font-size:25px;margin:40px 0 10px}
+.tcard p{font-size:15px;color:var(--grey);margin-bottom:22px}
+.tcard-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--ink)}
+.tcard-link svg{transition:transform .45s var(--ease)}
+.tcard:hover .tcard-link svg{transform:translateX(6px)}
+.tcard--feature{grid-column:span 2;background:var(--ink);border-color:var(--ink);color:#fff}
+.tcard--feature:hover{color:#fff}
+.tcard--feature h3{font-size:42px;max-width:13ch}
+.tcard--feature p{color:#CFC8BD;max-width:40ch}
+.tcard--feature .tcard-ico{background:rgba(217,185,138,.14);color:var(--gold)}
+.tcard--feature:hover .tcard-ico{background:var(--gold);color:var(--ink)}
+.tcard--feature .tcard-num{color:#A89F92}
+.tcard--feature .tcard-link{color:var(--gold)}
+.tcard-rings{position:absolute;right:-110px;bottom:-110px;width:340px;height:340px;border-radius:50%;border:1px solid rgba(217,185,138,.16);transition:transform 1s var(--ease)}
+.tcard-rings::after{content:"";position:absolute;inset:60px;border-radius:50%;border:1px solid rgba(217,185,138,.12)}
+.tcard--feature:hover .tcard-rings{transform:scale(1.12)}
+
+/* QUIZ */
+.page button{font-family:inherit}
+.quiz{padding:112px 0 0}
+.quiz-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:72px;align-items:center}
+.quiz-title,.faq-title{font-size:clamp(36px,4.3vw,60px);margin:18px 0 20px;max-width:14ch}
+.quiz-title em,.faq-title em{color:var(--brown)}
+.quiz-lead,.faq-lead{font-size:17px;color:var(--grey);max-width:40ch}
+.quiz-points{list-style:none;padding:0;margin:32px 0 0;display:flex;flex-direction:column;gap:14px}
+.quiz-points li{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500}
+.qp-ico{width:30px;height:30px;border-radius:50%;background:var(--brown-light);color:var(--brown);display:grid;place-items:center}
+.quiz-card{position:relative;display:flex;flex-direction:column;min-height:540px;padding:40px;border-radius:30px;background:#fff;border:1px solid var(--line);box-shadow:0 40px 80px -50px rgba(25,23,20,.45)}
+.quiz-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-size:13px;font-weight:600;color:var(--grey)}
+.quiz-bar{height:4px;margin-bottom:36px;border-radius:4px;background:var(--paper-soft);overflow:hidden}
+.quiz-bar span{display:block;height:100%;border-radius:4px;background:var(--ink);transition:width .7s var(--ease)}
+.quiz-q h3{font-size:32px;margin-bottom:26px}
+.quiz-opts{display:flex;flex-direction:column;gap:10px}
+.quiz-opt{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:62px;padding:12px 14px 12px 22px;border-radius:18px;border:1px solid var(--line);background:var(--paper);font-size:16px;font-weight:500;color:var(--ink);text-align:left;cursor:pointer;transition:border-color .3s,background .3s,transform .45s var(--ease),box-shadow .45s var(--ease)}
+.quiz-opt:hover{border-color:var(--ink);background:#fff;transform:translateX(4px);box-shadow:0 12px 26px -18px rgba(25,23,20,.45)}
+.quiz-opt:focus-visible,.quiz-back:focus-visible,.faq-q:focus-visible{outline:2px solid var(--brown);outline-offset:3px}
+.quiz-opt.is-picked{border-color:var(--ink);background:#fff}
+.opt-ico{width:36px;height:36px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;transition:background .3s,color .3s,border-color .3s}
+.quiz-opt:hover .opt-ico,.quiz-opt.is-picked .opt-ico{background:var(--ink);border-color:var(--ink);color:#fff}
+.quiz-back{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;margin-top:auto;padding:22px 0 0;background:none;border:0;font-size:14px;font-weight:600;color:var(--grey);cursor:pointer}
+.quiz-back:hover{color:var(--ink)}
+.q-anim-a{animation:qa .55s var(--ease) both}
+.q-anim-b{animation:qb .55s var(--ease) both}
+.quiz-result{display:flex;flex-direction:column;flex:1;animation:qa .6s var(--ease) both}
+.res-tag{align-self:flex-start;padding:7px 13px;border-radius:999px;background:var(--ink);color:var(--gold);font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.res-title{font-size:38px;margin:16px 0 14px}
+.res-text{font-size:16px;color:var(--grey)}
+.res-note{display:flex;gap:12px;margin-top:20px;padding:16px 18px;border-radius:16px;background:var(--paper-soft);font-size:14.5px;color:var(--ink)}
+.res-note svg{color:var(--brown);margin-top:2px}
+.res-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:32px}
+.res-disclaimer{margin-top:18px;font-size:12.5px;color:var(--grey)}
+
+/* FAQ */
+.faq{padding-top:0}
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:72px;align-items:start}
+.faq-side{position:sticky;top:120px}
+.faq-side .btn{margin-top:30px}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.page .faq-h{margin:0;font-size:inherit;letter-spacing:0}
+.faq-q{display:flex;justify-content:space-between;align-items:center;gap:24px;width:100%;padding:26px 0;background:none;border:0;cursor:pointer;text-align:left;font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:500;line-height:1.3;color:var(--ink);transition:color .3s}
+.faq-q:hover{color:var(--brown)}
+.faq-plus{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;color:var(--ink);transition:transform .5s var(--ease),background .35s,color .35s,border-color .35s}
+.faq-item.is-open .faq-plus{transform:rotate(45deg);background:var(--ink);border-color:var(--ink);color:#fff}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.faq-a > div{overflow:hidden;visibility:hidden;transition:visibility 0s .55s}
+.faq-item.is-open .faq-a{grid-template-rows:1fr}
+.faq-item.is-open .faq-a > div{visibility:visible;transition:none}
+.faq-a p{padding:0 66px 28px 0;font-size:16px;color:var(--grey)}
+.hours{list-style:none;margin:0 0 14px;padding:0 66px 0 0;display:flex;flex-direction:column}
+.hours li{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px;color:var(--ink)}
+.hours li span:first-child{color:var(--grey)}
+
+/* MARQUEE */
+.marquee{overflow:hidden;padding:26px 0;background:var(--paper-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.marquee-track{display:flex;width:max-content;animation:marquee 42s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-group{display:flex;align-items:center}
+.marquee-item{display:flex;align-items:center;gap:32px;padding-right:32px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:30px;white-space:nowrap}
+.marquee-item .sep{width:9px;height:9px;background:var(--brown);transform:rotate(45deg)}
+
+/* METHOD */
+.method{position:relative;overflow:hidden;background:var(--ink);color:#fff}
+.method .section-head h2 em{color:var(--gold)}
+.method .section-head p{color:#CFC8BD}
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.steps-line{position:absolute;top:40px;left:40px;right:12%;height:1px;background:rgba(255,255,255,.12)}
+.steps-line span{position:absolute;inset:0;background:linear-gradient(90deg,var(--gold),rgba(217,185,138,.15));transform-origin:left}
+.js-reveal .steps-line span{transform:scaleX(0);transition:transform 1.8s var(--ease) .25s}
+.js-reveal .steps-line.is-visible span{transform:scaleX(1)}
+.step-num{position:relative;z-index:1;width:80px;height:80px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:var(--ink);display:grid;place-items:center;font-family:'Fraunces',Georgia,serif;font-size:24px;color:var(--gold);transition:background .45s,color .45s,border-color .45s,transform .6s var(--ease)}
+.step:hover .step-num{background:var(--gold);color:var(--ink);border-color:var(--gold);transform:scale(1.06)}
+.step h3{font-size:25px;margin:30px 0 12px}
+.step p{font-size:15px;color:var(--muted-dark);max-width:30ch}
+.method-cta{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:88px;padding:26px 28px 26px 36px;border-radius:26px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035)}
+.method-cta p{font-family:'Fraunces',Georgia,serif;font-size:26px;line-height:1.25}
+.method-cta p span{color:var(--gold);font-style:italic}
+
+/* REVIEWS */
+.rating-card{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding:24px 24px 24px 30px;border-radius:26px;background:var(--paper-soft);border:1px solid var(--line)}
+.rating-big{font-family:'Fraunces',Georgia,serif;font-size:68px;line-height:.9;letter-spacing:-.04em}
+.rating-meta{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--grey)}
+.rating-meta .stars{color:var(--star);letter-spacing:2px;font-size:16px}
+.review-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+.rcard{margin:0;display:flex;flex-direction:column;min-height:400px;padding:36px 32px 28px;border-radius:26px;background:#fff;border:1px solid var(--line);transition:transform .55s var(--ease),box-shadow .55s var(--ease)}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 34px 60px -34px rgba(25,23,20,.35)}
+.rcard--offset{margin-top:44px}
+.rcard-head{display:flex;justify-content:space-between;align-items:flex-start}
+.rcard-quote{font-family:'Fraunces',Georgia,serif;font-size:110px;line-height:.7;height:46px;color:var(--brown-light)}
+.rcard .stars{color:var(--star);letter-spacing:2px;font-size:14px}
+.rcard blockquote{margin:22px 0 28px;font-family:'Fraunces',Georgia,serif;font-size:20px;line-height:1.5;color:var(--ink)}
+.who{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:22px;border-top:1px solid var(--line)}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--brown);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:600}
+.who-text{display:flex;flex-direction:column;line-height:1.3}
+.who-text strong{font-size:15px}
+.who-text span{font-size:13px;color:var(--grey)}
+
+/* CONTACT */
+.contact{padding:0 0 128px}
+.cta-panel{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:64px;align-items:center;padding:84px;border-radius:36px;background:var(--ink);color:#fff}
+.cta-panel .grain{-webkit-mask-image:radial-gradient(circle at 0% 0%,#000,transparent 75%);mask-image:radial-gradient(circle at 0% 0%,#000,transparent 75%)}
+.cta-rings{position:absolute;left:-180px;bottom:-260px;width:620px;height:620px;border-radius:50%;border:1px solid rgba(217,185,138,.12);pointer-events:none}
+.cta-rings::after{content:"";position:absolute;inset:90px;border-radius:50%;border:1px solid rgba(217,185,138,.09)}
+.cta-copy{position:relative}
+.cta-copy h2{font-size:clamp(42px,5.2vw,76px);margin:22px 0 22px}
+.cta-copy h2 em{color:var(--gold)}
+.cta-copy p{font-size:18px;color:#CFC8BD;max-width:40ch}
+.cta-buttons{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.contact-list{position:relative;display:flex;flex-direction:column}
+.citem{display:flex;align-items:center;gap:18px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.1);transition:padding .4s var(--ease)}
+.citem:first-child{border-top:1px solid rgba(255,255,255,.1)}
+a.citem:hover{padding-left:10px;color:#fff}
+.citem-ico{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.06);color:var(--gold);display:grid;place-items:center;transition:background .4s,color .4s}
+a.citem:hover .citem-ico{background:var(--gold);color:var(--ink)}
+.citem-text{display:flex;flex-direction:column;gap:2px}
+.citem-text small{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#A89F92;font-weight:600}
+.citem-text span{font-size:17px;color:#fff}
+.fine{margin-top:20px;display:flex;align-items:center;gap:8px;font-size:12.5px;color:#A89F92}
+
+/* FOOTER */
+.site-footer{background:#0E0D0B;color:#A89F92;padding:84px 0 36px;overflow:hidden}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08)}
+.site-footer .logo-text{color:#fff}
+.site-footer .logo-text small{color:#A89F92}
+.site-footer .logo-mark{background:rgba(255,255,255,.07)}
+.footer-about{margin-top:20px;font-size:14px;max-width:34ch}
+.socials{display:flex;gap:10px;margin-top:24px}
+.socials a{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:grid;place-items:center;color:#D8D3CB;transition:background .35s,color .35s,border-color .35s}
+.socials a:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.fcol h4{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#fff;margin-bottom:18px}
+.fcol a,.fcol span{display:block;font-size:14px;color:#D8D3CB;padding:6px 0;transition:color .3s}
+.fcol a:hover{color:var(--gold)}
+.footer-word{margin-top:40px;font-family:'Fraunces',Georgia,serif;font-size:clamp(80px,17vw,248px);line-height:.85;letter-spacing:-.045em;text-align:center;color:rgba(255,255,255,.045);user-select:none;white-space:nowrap}
+.footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,.08);font-size:13px}
+
+/* FLOATING + MOBILE BAR */
+.wa-float{position:fixed;right:28px;bottom:28px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--ink);color:var(--gold);display:grid;place-items:center;box-shadow:0 18px 40px -12px rgba(0,0,0,.55);transition:transform .5s var(--ease)}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--ink);animation:ring 2.6s var(--ease) infinite}
+.wa-float:hover{transform:scale(1.08);color:var(--gold)}
+.wa-tip{position:absolute;right:76px;top:50%;padding:10px 16px;border-radius:999px;background:#fff;color:var(--ink);font-size:13px;font-weight:600;white-space:nowrap;box-shadow:0 10px 30px -10px rgba(25,23,20,.35);opacity:0;transform:translate(10px,-50%);transition:opacity .35s,transform .45s var(--ease);pointer-events:none}
+.wa-float:hover .wa-tip{opacity:1;transform:translate(0,-50%)}
+.mobile-bar{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;gap:8px;padding:8px;border-radius:22px;background:rgba(250,248,245,.92);border:1px solid var(--line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 16px 40px -14px rgba(25,23,20,.4)}
+.mobile-bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:15px;font-size:14px;font-weight:600}
+.mobile-bar .mb-wa{flex:2;background:var(--ink);color:#fff}
+.mobile-bar .mb-call{flex:1;background:var(--paper-soft);color:var(--ink)}
+
+/* REVEAL */
+.js-reveal .reveal{opacity:0}
+.js-reveal .reveal.is-visible{animation:reveal 1s var(--ease) both;animation-delay:var(--d,0s)}
+
+@keyframes reveal{from{opacity:0;translate:0 36px}to{opacity:1;translate:0 0}}
+@keyframes rise{from{opacity:0;translate:0 28px}to{opacity:1;translate:0 0}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(-3deg)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(217,185,138,.6)}70%{box-shadow:0 0 0 10px rgba(217,185,138,0)}100%{box-shadow:0 0 0 0 rgba(217,185,138,0)}}
+@keyframes ring{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.6);opacity:0}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@keyframes qa{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+@keyframes qb{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+
+@media (max-width:1100px){
+  .quiz-grid,.faq-grid{grid-template-columns:minmax(0,1fr);gap:48px}
+  .faq-side{position:static}
+}
+@media (max-width:860px){
+  .quiz{padding-top:84px}
+}
+@media (max-width:640px){
+  .quiz-card{padding:26px 20px;min-height:0;border-radius:24px}
+  .quiz-q h3{font-size:26px}
+  .res-title{font-size:30px}
+  .res-actions .btn{width:100%;justify-content:space-between}
+  .res-actions .btn-outline{justify-content:center}
+  .faq-q{font-size:19px;padding:22px 0}
+  .faq-a p,.hours{padding-right:0}
+}
+
+@media (max-width:1100px){
+  .main-nav,.header-phone{display:none}
+  .burger{display:inline-block}
+  .mobile-nav{display:flex}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:56px}
+  .hero-visual{width:100%;max-width:540px;height:540px;margin:0 auto}
+  .bento{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:56px}
+  .steps-line{display:none}
+  .cta-panel{grid-template-columns:minmax(0,1fr);padding:60px;gap:48px}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .section{padding:92px 0}
+  .contact{padding-bottom:92px}
+  .header-actions .btn{display:none}
+  .stats-card{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .review-grid{grid-template-columns:minmax(0,1fr)}
+  .rcard{min-height:0}
+  .rcard--offset{margin-top:0}
+  .wa-float{display:none}
+  .mobile-bar{display:flex}
+  .page{padding-bottom:84px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .header-inner{height:72px}
+  .hero{padding:56px 0 112px}
+  .hero-visual{height:450px}
+  .arch{left:28px;right:28px}
+  .fc-1{left:0;top:44px}
+  .fc-2{right:0;bottom:80px}
+  .float-chip{left:44px;bottom:18px}
+  .fc-big{font-size:28px}
+  .hero-ctas .btn,.cta-buttons .btn{width:100%;justify-content:space-between}
+  .hero-ctas .btn-ghost,.cta-buttons .btn-ghost{justify-content:center}
+  .stat{padding:24px 20px}
+  .stat-num{font-size:40px}
+  .bento{grid-template-columns:minmax(0,1fr)}
+  .tcard--feature{grid-column:auto}
+  .tcard--feature h3{font-size:32px}
+  .tcard{min-height:0}
+  .steps{grid-template-columns:minmax(0,1fr);row-gap:44px}
+  .method-cta{padding:24px}
+  .method-cta p{font-size:22px}
+  .marquee-item{font-size:24px}
+  .cta-panel{padding:40px 22px;border-radius:26px}
+  .rating-card{width:100%}
+  .footer-top{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  .page *,.page *::before,.page *::after{animation:none !important;transition:none !important}
+  .hero-anim,.js-reveal .reveal{opacity:1}
+  .js-reveal .steps-line span{transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="page js-reveal">
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#inicio" class="logo" aria-label="Arrivadent, inicio">
+      <span class="logo-mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c-1.6-1-3-1.5-4.5-1.5C5 2 3.5 4.2 3.5 7c0 2.2.8 3.6 1.5 5.4.6 1.6.9 3.3 1.1 5.1.2 2 .9 4.5 2.4 4.5 1.3 0 1.5-1.6 1.8-3.4.3-1.6.7-3.1 1.7-3.1s1.4 1.5 1.7 3.1c.3 1.8.5 3.4 1.8 3.4 1.5 0 2.2-2.5 2.4-4.5.2-1.8.5-3.5 1.1-5.1.7-1.8 1.5-3.2 1.5-5.4 0-2.8-1.5-5-4-5-1.5 0-2.9.5-4.5 1.5z"></path></svg>
+      </span>
+      <span class="logo-text">ARRIVADENT<small>Clínica dental · Logroño</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Principal">
+      <a href="#tratamientos">Tratamientos</a>
+      <a href="#metodo">Por qué nosotros</a>
+      <a href="#resenas">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+34941700212">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg>
+        941 700 212
+      </a>
+      <a class="btn btn-dark btn-sm" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Arrivadent" target="_blank" rel="noopener">
+        Pedir cita
+        <span class="btn-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+      <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil" hidden>
+      <a class="m-link" href="#tratamientos">Tratamientos <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      <a class="m-link" href="#metodo">Por qué nosotros <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      <a class="m-link" href="#resenas">Opiniones <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      <a class="m-link" href="#test">Test de 30 segundos <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      <a class="m-link" href="#preguntas">Preguntas frecuentes <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      <a class="m-link" href="#contacto">Contacto <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      <a class="btn btn-dark btn-lg" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Arrivadent" target="_blank" rel="noopener">
+        Pedir cita por WhatsApp
+        <span class="btn-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero on-dark" id="inicio">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow hero-anim d1"><span class="dot"></span>Clínica dental · Logroño</div>
+      <h1 class="hero-anim d2">Odontología avanzada y estética dental, <em>con un trato que se nota.</em></h1>
+      <p class="lead hero-anim d3">Atención personalizada, tecnología avanzada y tratamientos diseñados para cuidar tu sonrisa. Revisiones, estética y urgencias en el centro de Logroño.</p>
+      <div class="hero-ctas hero-anim d4">
+        <a class="btn btn-light btn-lg" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20los%20tratamientos%20de%20Arrivadent" target="_blank" rel="noopener">
+          Escríbenos por WhatsApp
+          <span class="btn-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#test">Hacer el test · 30 s</a>
+      </div>
+      <div class="hero-proof hero-anim d5">
+        <div class="avatars" aria-hidden="true"><span>JP</span><span>SC</span><span>FS</span></div>
+        <div class="proof-text">
+          <div><span class="stars">★★★★★</span><strong>5,0</strong></div>
+          <span>26 reseñas de pacientes en Google</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual hero-anim d3">
+      <div class="arch">
+        <div class="ring ring-1" aria-hidden="true"></div>
+        <div class="ring ring-2" aria-hidden="true"></div>
+        <div class="ring ring-3" aria-hidden="true"></div>
+        <div class="arch-inner">
+          <svg class="tooth" width="76" height="76" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c-1.6-1-3-1.5-4.5-1.5C5 2 3.5 4.2 3.5 7c0 2.2.8 3.6 1.5 5.4.6 1.6.9 3.3 1.1 5.1.2 2 .9 4.5 2.4 4.5 1.3 0 1.5-1.6 1.8-3.4.3-1.6.7-3.1 1.7-3.1s1.4 1.5 1.7 3.1c.3 1.8.5 3.4 1.8 3.4 1.5 0 2.2-2.5 2.4-4.5.2-1.8.5-3.5 1.1-5.1.7-1.8 1.5-3.2 1.5-5.4 0-2.8-1.5-5-4-5-1.5 0-2.9.5-4.5 1.5z"></path></svg>
+          <span class="ph-label">[ Foto real del equipo o del gabinete ]</span>
+        </div>
+      </div>
+      <div class="float-card fc-1">
+        <span class="fc-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"></path></svg></span>
+        <span class="fc-text"><strong>5,0 en Google</strong><span class="fc-stars">★★★★★</span><span>26 reseñas de pacientes</span></span>
+      </div>
+      <div class="float-card fc-2">
+        <span class="fc-big">+10</span>
+        <span class="fc-text"><strong>años</strong><span>cuidando sonrisas<br>en Logroño</span></span>
+      </div>
+      <div class="float-chip"><span class="live"></span>WhatsApp 24/7 · respuesta inmediata</div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Datos de la clínica">
+  <div class="wrap">
+    <div class="stats-card reveal">
+      <div class="stat"><span class="stat-num">+10</span><span class="stat-label">años cuidando sonrisas en Logroño</span></div>
+      <div class="stat"><span class="stat-num">5,0<small>★</small></span><span class="stat-label">valoración media en Google</span></div>
+      <div class="stat"><span class="stat-num">26</span><span class="stat-label">reseñas de pacientes en Google</span></div>
+      <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">te respondemos por WhatsApp</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section quiz" id="test">
+  <div class="wrap quiz-grid">
+    <div class="reveal">
+      <div class="eyebrow"><span class="dot"></span>Test de 30 segundos</div>
+      <h2 class="quiz-title">¿Qué tratamiento <em>encaja contigo?</em></h2>
+      <p class="quiz-lead">Cuatro preguntas y te orientamos sobre por dónde empezar. Sin dejar tus datos.</p>
+      <ul class="quiz-points">
+        <li><span class="qp-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg></span>Resultado al momento</li>
+        <li><span class="qp-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg></span>Cuatro preguntas, 30 segundos</li>
+        <li><span class="qp-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg></span>Orientativo: el diagnóstico se hace en consulta</li>
+      </ul>
+    </div>
+
+    <div class="quiz-card reveal" style="--d: .12s">
+      <div class="quiz-run" id="quiz-run">
+        <div class="quiz-meta"><span id="quiz-count">Pregunta 1 de 4</span><span id="quiz-pct">0%</span></div>
+        <div class="quiz-bar" aria-hidden="true"><span id="quiz-bar" style="width: 0%"></span></div>
+        <div class="quiz-q q-anim-b" id="quiz-q">
+          <h3 id="quiz-title" tabindex="-1">¿Para quién es la consulta?</h3>
+          <div class="quiz-opts" id="quiz-opts" role="group" aria-labelledby="quiz-title"></div>
+        </div>
+        <button type="button" class="quiz-back" id="quiz-back" hidden>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
+          Pregunta anterior
+        </button>
+      </div>
+
+      <div class="quiz-result" id="quiz-result" aria-live="polite" hidden>
+        <div class="quiz-meta"><span>Tu resultado</span><span>100%</span></div>
+        <div class="quiz-bar" aria-hidden="true"><span style="width: 100%"></span></div>
+        <span class="res-tag" id="res-tag" hidden>Prioridad alta</span>
+        <h3 class="res-title" id="res-title" tabindex="-1"></h3>
+        <p class="res-text" id="res-text"></p>
+        <p class="res-note" id="res-note" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg><span id="res-note-text"></span></p>
+        <div class="res-actions">
+          <a class="btn btn-dark btn-lg" id="res-wa" href="https://wa.me/34644967869" target="_blank" rel="noopener">
+            Pedir cita por WhatsApp
+            <span class="btn-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+          </a>
+          <button type="button" class="btn btn-outline btn-lg" id="quiz-reset">Repetir test</button>
+        </div>
+        <p class="res-disclaimer">Resultado orientativo. El diagnóstico lo hace el dentista en consulta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tratamientos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow"><span class="dot"></span>Tratamientos</div>
+        <h2>Cuidamos mucho más <em>que tu sonrisa.</em></h2>
+      </div>
+      <p class="reveal" style="--d: .12s">Combinamos experiencia, tecnología y atención personalizada para ofrecerte soluciones adaptadas a tus necesidades.</p>
+    </div>
+
+    <div class="bento">
+      <a class="tcard tcard--feature reveal" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20odontolog%C3%ADa%20general" target="_blank" rel="noopener">
+        <span class="tcard-rings" aria-hidden="true"></span>
+        <span class="tcard-top">
+          <span class="tcard-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c-1.6-1-3-1.5-4.5-1.5C5 2 3.5 4.2 3.5 7c0 2.2.8 3.6 1.5 5.4.6 1.6.9 3.3 1.1 5.1.2 2 .9 4.5 2.4 4.5 1.3 0 1.5-1.6 1.8-3.4.3-1.6.7-3.1 1.7-3.1s1.4 1.5 1.7 3.1c.3 1.8.5 3.4 1.8 3.4 1.5 0 2.2-2.5 2.4-4.5.2-1.8.5-3.5 1.1-5.1.7-1.8 1.5-3.2 1.5-5.4 0-2.8-1.5-5-4-5-1.5 0-2.9.5-4.5 1.5z"></path></svg></span>
+          <span class="tcard-num">01</span>
+        </span>
+        <h3>Odontología general</h3>
+        <p>Revisiones, limpiezas, empastes y prevención para mantener tu sonrisa sana en el día a día.</p>
+        <span class="tcard-link">Pedir revisión <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+
+      <a class="tcard reveal" style="--d: .08s" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20ortodoncia" target="_blank" rel="noopener">
+        <span class="tcard-top">
+          <span class="tcard-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12h19"></path><rect x="4.5" y="9" width="4" height="6" rx="1"></rect><rect x="10" y="9" width="4" height="6" rx="1"></rect><rect x="15.5" y="9" width="4" height="6" rx="1"></rect></svg></span>
+          <span class="tcard-num">02</span>
+        </span>
+        <h3>Ortodoncia</h3>
+        <p>Mejoramos la estética, la mordida y la salud dental corrigiendo la posición de los dientes, en adultos y niños.</p>
+        <span class="tcard-link">Consultar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+
+      <a class="tcard reveal" style="--d: .16s" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20endodoncia" target="_blank" rel="noopener">
+        <span class="tcard-top">
+          <span class="tcard-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c-1.6-1-3-1.5-4.5-1.5C5 2 3.5 4.2 3.5 7c0 2.2.8 3.6 1.5 5.4.6 1.6.9 3.3 1.1 5.1.2 2 .9 4.5 2.4 4.5 1.3 0 1.5-1.6 1.8-3.4.3-1.6.7-3.1 1.7-3.1s1.4 1.5 1.7 3.1c.3 1.8.5 3.4 1.8 3.4 1.5 0 2.2-2.5 2.4-4.5.2-1.8.5-3.5 1.1-5.1.7-1.8 1.5-3.2 1.5-5.4 0-2.8-1.5-5-4-5-1.5 0-2.9.5-4.5 1.5z"></path><path d="M12 7v7"></path></svg></span>
+          <span class="tcard-num">03</span>
+        </span>
+        <h3>Endodoncia</h3>
+        <p>Eliminamos el dolor y salvamos el diente cuando el nervio está dañado, evitando la extracción.</p>
+        <span class="tcard-link">Consultar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+
+      <a class="tcard reveal" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20implantes%20dentales" target="_blank" rel="noopener">
+        <span class="tcard-top">
+          <span class="tcard-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 3h9l-1.2 4H8.7z"></path><path d="M9.5 7v11l2.5 3 2.5-3V7"></path><path d="M9.5 10.5h5M9.5 14h5"></path></svg></span>
+          <span class="tcard-num">04</span>
+        </span>
+        <h3>Implantes dentales</h3>
+        <p>Reemplazamos dientes perdidos con implantes fijos que imitan la función y el aspecto natural.</p>
+        <span class="tcard-link">Consultar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+
+      <a class="tcard reveal" style="--d: .08s" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20sedaci%C3%B3n%20consciente" target="_blank" rel="noopener">
+        <span class="tcard-top">
+          <span class="tcard-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.5A8.5 8.5 0 1 1 10.5 3.5a6.6 6.6 0 0 0 10 10z"></path></svg></span>
+          <span class="tcard-num">05</span>
+        </span>
+        <h3>Sedación consciente</h3>
+        <p>Técnica segura que reduce el miedo y la ansiedad durante el tratamiento, para una experiencia relajada.</p>
+        <span class="tcard-link">Consultar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+
+      <a class="tcard reveal" style="--d: .16s" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20pr%C3%B3tesis%20dental" target="_blank" rel="noopener">
+        <span class="tcard-top">
+          <span class="tcard-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"></path></svg></span>
+          <span class="tcard-num">06</span>
+        </span>
+        <h3>Prótesis dental</h3>
+        <p>Recuperamos la función y la estética de tu sonrisa con prótesis fijas o removibles, adaptadas a ti.</p>
+        <span class="tcard-link">Consultar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+
+      <a class="tcard reveal" style="--d: .24s" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20blanqueamiento%20dental" target="_blank" rel="noopener">
+        <span class="tcard-top">
+          <span class="tcard-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"></path></svg></span>
+          <span class="tcard-num">07</span>
+        </span>
+        <h3>Blanqueamiento LED</h3>
+        <p>Tratamiento estético seguro y eficaz para aclarar el tono de los dientes y lograr una sonrisa más luminosa.</p>
+        <span class="tcard-link">Consultar <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span class="marquee-item">Odontología general<span class="sep"></span></span>
+      <span class="marquee-item">Ortodoncia<span class="sep"></span></span>
+      <span class="marquee-item">Endodoncia<span class="sep"></span></span>
+      <span class="marquee-item">Implantes dentales<span class="sep"></span></span>
+      <span class="marquee-item">Sedación consciente<span class="sep"></span></span>
+      <span class="marquee-item">Prótesis dental<span class="sep"></span></span>
+      <span class="marquee-item">Blanqueamiento LED<span class="sep"></span></span>
+    </div>
+    <div class="marquee-group">
+      <span class="marquee-item">Odontología general<span class="sep"></span></span>
+      <span class="marquee-item">Ortodoncia<span class="sep"></span></span>
+      <span class="marquee-item">Endodoncia<span class="sep"></span></span>
+      <span class="marquee-item">Implantes dentales<span class="sep"></span></span>
+      <span class="marquee-item">Sedación consciente<span class="sep"></span></span>
+      <span class="marquee-item">Prótesis dental<span class="sep"></span></span>
+      <span class="marquee-item">Blanqueamiento LED<span class="sep"></span></span>
+    </div>
+  </div>
+</div>
+
+<section class="section method on-dark" id="metodo">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="wrap" style="position: relative">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow"><span class="dot"></span>Por qué Arrivadent</div>
+        <h2>Lo que cambia cuando te atienden <em>como a alguien conocido.</em></h2>
+      </div>
+      <p class="reveal" style="--d: .12s">Cuatro cosas que notarás desde la primera visita.</p>
+    </div>
+
+    <div class="steps">
+      <div class="steps-line reveal" aria-hidden="true"><span></span></div>
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Un plan hecho para ti</h3>
+        <p>Cada paciente recibe un plan de tratamiento adaptado a sus necesidades, no una plantilla genérica.</p>
+      </div>
+      <div class="step reveal" style="--d: .12s">
+        <div class="step-num">02</div>
+        <h3>Tecnología al día</h3>
+        <p>Equipamiento actualizado para diagnósticos más precisos y tratamientos más cómodos.</p>
+      </div>
+      <div class="step reveal" style="--d: .24s">
+        <div class="step-num">03</div>
+        <h3>Respuesta rápida</h3>
+        <p>Dudas y urgencias atendidas por WhatsApp, sin esperar al horario de centralita.</p>
+      </div>
+      <div class="step reveal" style="--d: .36s">
+        <div class="step-num">04</div>
+        <h3>En el centro de Logroño</h3>
+        <p>Fácil acceso en Av. Burgos 100, con disponibilidad para primeras visitas y revisiones.</p>
+      </div>
+    </div>
+
+    <div class="method-cta reveal">
+      <p>¿Primera visita? <span>Te damos cita en el centro de Logroño.</span></p>
+      <a class="btn btn-light btn-lg" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Arrivadent" target="_blank" rel="noopener">
+        Reservar por WhatsApp
+        <span class="btn-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="resenas">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow"><span class="dot"></span>Opiniones</div>
+        <h2>5,0 en Google <em>con 26 reseñas.</em></h2>
+      </div>
+      <div class="rating-card reveal" style="--d: .12s">
+        <span class="rating-big">5,0</span>
+        <span class="rating-meta"><span class="stars">★★★★★</span><span>26 reseñas en Google</span></span>
+        <a class="btn btn-outline" href="https://g.page/r/CcH5vs7ssUfJEBM/review" target="_blank" rel="noopener">Escribir tu reseña</a>
+      </div>
+    </div>
+
+    <div class="review-grid">
+      <figure class="rcard reveal" style="margin: 0">
+        <div class="rcard-head"><span class="rcard-quote" aria-hidden="true">“</span><span class="stars" aria-label="5 estrellas">★★★★★</span></div>
+        <blockquote>Tuve un trato maravilloso, muy cercano, y me gustó su sinceridad en la atención brindada. La recomiendo sin duda.</blockquote>
+        <figcaption class="who"><span class="avatar" aria-hidden="true">JP</span><span class="who-text"><strong>Janet Pérez</strong><span>Paciente · reseña en Google</span></span></figcaption>
+      </figure>
+      <figure class="rcard rcard--offset reveal" style="--d: .12s">
+        <div class="rcard-head"><span class="rcard-quote" aria-hidden="true">“</span><span class="stars" aria-label="5 estrellas">★★★★★</span></div>
+        <blockquote>Mi experiencia ha sido espectacular. Cercanía, paciencia, trato súper amable y profesionales como pocos. Supieron escuchar mis necesidades desde el primer momento.</blockquote>
+        <figcaption class="who"><span class="avatar" aria-hidden="true" style="background: #3A2F25">SC</span><span class="who-text"><strong>Susana del Campo</strong><span>Paciente · reseña en Google</span></span></figcaption>
+      </figure>
+      <figure class="rcard reveal" style="--d: .24s; margin: 0">
+        <div class="rcard-head"><span class="rcard-quote" aria-hidden="true">“</span><span class="stars" aria-label="5 estrellas">★★★★★</span></div>
+        <blockquote>La dentista fue muy profesional, cercana y cuidadosa en todo momento. Me explicó todo perfectamente y no sentí nada de dolor.</blockquote>
+        <figcaption class="who"><span class="avatar" aria-hidden="true" style="background: #8B6A47">FS</span><span class="who-text"><strong>Fabrizio Silva</strong><span>Paciente · reseña en Google</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="preguntas">
+  <div class="wrap faq-grid">
+    <div class="faq-side reveal">
+      <div class="eyebrow"><span class="dot"></span>Preguntas frecuentes</div>
+      <h2 class="faq-title">Lo que nos preguntáis <em>antes de venir.</em></h2>
+      <p class="faq-lead">¿No encuentras tu respuesta? Escríbenos y te contestamos al momento.</p>
+      <a class="btn btn-dark btn-lg" href="https://wa.me/34644967869?text=Hola%2C%20tengo%20una%20duda%20sobre%20Arrivadent" target="_blank" rel="noopener">
+        Preguntar por WhatsApp
+        <span class="btn-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+      </a>
+    </div>
+
+    <div class="faq-list reveal" style="--d: .12s">
+      <div class="faq-item is-open">
+        <h3 class="faq-h"><button type="button" class="faq-q" aria-expanded="true" aria-controls="faq-a1"><span>¿Atendéis urgencias dentales?</span><span class="faq-plus" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+        <div class="faq-a" id="faq-a1"><div><p>Sí. Escríbenos por WhatsApp contándonos qué te pasa y te respondemos al momento para buscarte hueco lo antes posible.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-h"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a2"><span>¿Cuánto cuesta la primera visita?</span><span class="faq-plus" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+        <div class="faq-a" id="faq-a2"><div><p>La primera visita cuesta 40 €. En ella valoramos tu caso y te explicamos el plan de tratamiento y su presupuesto antes de empezar.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-h"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a3"><span>¿Puedo pagar el tratamiento a plazos?</span><span class="faq-plus" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+        <div class="faq-a" id="faq-a3"><div><p>Sí. Puedes fraccionar el pago sin intereses o financiarlo a través de Santander Consumer. Te explicamos las opciones junto al presupuesto.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-h"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a4"><span>Me da miedo el dentista, ¿qué podéis hacer?</span><span class="faq-plus" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+        <div class="faq-a" id="faq-a4"><div><p>Vamos a tu ritmo y te explicamos cada paso. Si lo necesitas, valoramos la sedación consciente: una técnica segura que reduce el miedo y la ansiedad durante el tratamiento.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-h"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a5"><span>¿La ortodoncia es solo para niños?</span><span class="faq-plus" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+        <div class="faq-a" id="faq-a5"><div><p>No. Tratamos a adultos y a niños para mejorar la estética, la mordida y la salud dental.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-h"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a6"><span>¿Qué horario tenéis?</span><span class="faq-plus" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+        <div class="faq-a" id="faq-a6"><div>
+          <ul class="hours">
+            <li><span>Lunes</span><span>9:30 – 16:00</span></li>
+            <li><span>Martes a jueves</span><span>9:30 – 13:30 · 16:30 – 20:00</span></li>
+            <li><span>Viernes</span><span>9:00 – 15:00</span></li>
+            <li><span>Sábado y domingo</span><span>Cerrado</span></li>
+          </ul>
+          <p>Por WhatsApp puedes escribirnos a cualquier hora.</p>
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-h"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a7"><span>¿Dónde está la clínica?</span><span class="faq-plus" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+        <div class="faq-a" id="faq-a7"><div><p>En Av. Burgos 100, bajo 3, en el centro de Logroño, con disponibilidad para primeras visitas y revisiones.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="cta-panel on-dark reveal">
+      <div class="grain" aria-hidden="true"></div>
+      <div class="cta-rings" aria-hidden="true"></div>
+      <div class="cta-copy">
+        <div class="eyebrow"><span class="dot"></span>Reserva tu cita</div>
+        <h2>Hablemos de <em>tu sonrisa.</em></h2>
+        <p>Escríbenos por WhatsApp y te respondemos al momento para darte cita en Logroño.</p>
+        <div class="cta-buttons">
+          <a class="btn btn-light btn-lg" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Arrivadent" target="_blank" rel="noopener">
+            Escríbenos por WhatsApp
+            <span class="btn-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="tel:+34941700212">Llamar</a>
+        </div>
+      </div>
+      <div class="contact-list">
+        <a class="citem" href="https://maps.google.com/?q=Av.+Burgos+100+Logro%C3%B1o" target="_blank" rel="noopener">
+          <span class="citem-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span>
+          <span class="citem-text"><small>Dirección</small><span>Av. Burgos 100, bajo 3 · Logroño</span></span>
+        </a>
+        <a class="citem" href="tel:+34941700212">
+          <span class="citem-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span>
+          <span class="citem-text"><small>Teléfono</small><span>+34 941 700 212</span></span>
+        </a>
+        <a class="citem" href="mailto:info@clinicaarrivadent.es">
+          <span class="citem-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span>
+          <span class="citem-text"><small>Email</small><span>info@clinicaarrivadent.es</span></span>
+        </a>
+        <div class="citem">
+          <span class="citem-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+          <span class="citem-text"><small>Horario</small><span>Lun 9:30–16:00 · Mar a jue 9:30–13:30 y 16:30–20:00 · Vie 9:00–15:00</span></span>
+        </div>
+        <p class="fine">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          Nº Registro Sanitario 239170251044
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="#inicio" class="logo" aria-label="Arrivadent, inicio">
+          <span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c-1.6-1-3-1.5-4.5-1.5C5 2 3.5 4.2 3.5 7c0 2.2.8 3.6 1.5 5.4.6 1.6.9 3.3 1.1 5.1.2 2 .9 4.5 2.4 4.5 1.3 0 1.5-1.6 1.8-3.4.3-1.6.7-3.1 1.7-3.1s1.4 1.5 1.7 3.1c.3 1.8.5 3.4 1.8 3.4 1.5 0 2.2-2.5 2.4-4.5.2-1.8.5-3.5 1.1-5.1.7-1.8 1.5-3.2 1.5-5.4 0-2.8-1.5-5-4-5-1.5 0-2.9.5-4.5 1.5z"></path></svg></span>
+          <span class="logo-text">ARRIVADENT<small>Clínica dental · Logroño</small></span>
+        </a>
+        <p class="footer-about">Clínica dental y medicina estética en Logroño. Av. Burgos 100, bajo 3.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/Clinicaarrivadent" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"></circle></svg>
+          </a>
+          <a href="https://wa.me/34644967869" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.3A8.5 8.5 0 1 1 8 19.6z"></path></svg>
+          </a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h4>Clínica</h4>
+        <a href="#tratamientos">Tratamientos</a>
+        <a href="#metodo">Por qué nosotros</a>
+        <a href="#resenas">Opiniones</a>
+        <a href="#test">Test de 30 segundos</a>
+        <a href="#preguntas">Preguntas frecuentes</a>
+        <a href="#contacto">Pedir cita</a>
+      </div>
+      <div class="fcol">
+        <h4>Contacto</h4>
+        <a href="tel:+34941700212">+34 941 700 212</a>
+        <a href="mailto:info@clinicaarrivadent.es">info@clinicaarrivadent.es</a>
+        <span>Av. Burgos 100, bajo 3</span>
+        <span>Logroño, La Rioja</span>
+      </div>
+      <div class="fcol">
+        <h4>Legal</h4>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="/politica-de-privacidad">Política de privacidad</a>
+        <a href="/politica-de-cookies">Política de cookies</a>
+      </div>
+    </div>
+    <div class="footer-word" aria-hidden="true">Arrivadent</div>
+    <div class="footer-bottom">
+      <span>© 2026 Clínica Arrivadent S.L. Todos los derechos reservados.</span>
+      <span>Nº Registro Sanitario 239170251044</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20los%20tratamientos%20de%20Arrivadent" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.3A8.5 8.5 0 1 1 8 19.6z"></path><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" stroke-width="2.4" stroke-linecap="round"></path></svg>
+  <span class="wa-tip">¿Hablamos? Te respondemos al momento</span>
+</a>
+
+<div class="mobile-bar">
+  <a class="mb-wa" href="https://wa.me/34644967869?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Arrivadent" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.3A8.5 8.5 0 1 1 8 19.6z"></path></svg>
+    Pedir cita por WhatsApp
+  </a>
+  <a class="mb-call" href="tel:+34941700212">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg>
+    Llamar
+  </a>
+</div>
+
+</div>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+
+  var header = document.querySelector('.site-header');
+  function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 24); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  var burger = document.querySelector('.burger');
+  var mobileNav = $('mobile-nav');
+  function setMenu(open) {
+    mobileNav.hidden = !open;
+    burger.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  }
+  burger.addEventListener('click', function () { setMenu(mobileNav.hidden); });
+  mobileNav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function (item) {
+    var btn = item.querySelector('.faq-q');
+    btn.addEventListener('click', function () {
+      var open = !item.classList.contains('is-open');
+      faqItems.forEach(function (other) {
+        other.classList.remove('is-open');
+        other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (open) { item.classList.add('is-open'); btn.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+
+  var QUESTIONS = [
+    { key: 'who', title: '¿Para quién es la consulta?', options: [
+      { id: 'adulto', label: 'Para mí (adulto)' },
+      { id: 'teen', label: 'Para mi hijo o hija adolescente' },
+      { id: 'kid', label: 'Para un niño o niña de menos de 12 años' }
+    ] },
+    { key: 'goal', title: '¿Qué te gustaría resolver?', options: [
+      { id: 'dolor', label: 'Tengo dolor o molestias' },
+      { id: 'mordida', label: 'Dientes torcidos o mala mordida' },
+      { id: 'falta', label: 'Me falta uno o varios dientes' },
+      { id: 'estetica', label: 'Mejorar el color de mi sonrisa' },
+      { id: 'revision', label: 'Una revisión o limpieza' }
+    ] },
+    { key: 'when', title: '¿Cuándo te gustaría venir?', options: [
+      { id: 'ya', label: 'Lo antes posible' },
+      { id: 'pronto', label: 'En las próximas semanas' },
+      { id: 'info', label: 'Solo quiero informarme' }
+    ] },
+    { key: 'nerves', title: '¿Cómo llevas ir al dentista?', options: [
+      { id: 'bien', label: 'Sin problema' },
+      { id: 'algo', label: 'Me pongo algo nervioso' },
+      { id: 'miedo', label: 'Me da bastante miedo' }
+    ] }
+  ];
+  var RESULTS = {
+    dolor: { title: 'Endodoncia o valoración de urgencia', text: 'El dolor dental suele avisar de una caries profunda o de un nervio afectado. Cuanto antes lo valoremos, más fácil es aliviarlo y salvar el diente.' },
+    mordida: { title: 'Ortodoncia', text: 'Corregir la posición de los dientes mejora la estética, la mordida y la salud dental. En la primera visita valoramos tu caso y te explicamos las opciones.' },
+    falta: { title: 'Implantes o prótesis dental', text: 'Según tu caso, un implante fijo o una prótesis fija o removible devuelven la función y el aspecto natural de tu sonrisa.' },
+    estetica: { title: 'Blanqueamiento con luz LED', text: 'Un tratamiento estético seguro y eficaz para aclarar el tono de los dientes. Antes comprobamos que dientes y encías estén sanos.' },
+    revision: { title: 'Revisión y odontología general', text: 'Una revisión con limpieza es el mejor punto de partida: detectamos a tiempo cualquier problema y te damos un plan de prevención.' }
+  };
+  var ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>';
+
+  var step = 0;
+  var answers = {};
+
+  function renderResult() {
+    var r = RESULTS[answers.goal] || RESULTS.revision;
+    var urgent = answers.goal === 'dolor' && answers.when === 'ya';
+    var notes = [];
+    if (answers.who === 'kid' || answers.who === 'teen') {
+      notes.push(answers.goal === 'mordida'
+        ? 'En niños y adolescentes, valorar la ortodoncia a tiempo ayuda a guiar el crecimiento de la boca.'
+        : 'También atendemos a niños y adolescentes, con un trato adaptado a su edad.');
+    }
+    if (answers.nerves === 'algo' || answers.nerves === 'miedo') {
+      notes.push('Si ir al dentista te pone nervioso, podemos valorar la sedación consciente para que la experiencia sea más relajada.');
+    }
+    var whoTxt = { adulto: 'para mí', teen: 'para mi hijo/a adolescente', kid: 'para mi hijo/a' }[answers.who];
+    var msg = 'Hola, he hecho el test de la web de Arrivadent. Me interesa: ' + r.title + (whoTxt ? ' (' + whoTxt + ')' : '') + '. ¿Me dais cita?';
+
+    $('res-tag').hidden = !urgent;
+    $('res-title').textContent = r.title;
+    $('res-text').textContent = urgent ? r.text + ' Escríbenos hoy y te buscamos hueco cuanto antes.' : r.text;
+    $('res-note').hidden = notes.length === 0;
+    $('res-note-text').textContent = notes.join(' ');
+    $('res-wa').href = 'https://wa.me/34644967869?text=' + encodeURIComponent(msg);
+  }
+
+  function renderQuiz(moveFocus) {
+    var done = step >= QUESTIONS.length;
+    $('quiz-run').hidden = done;
+    $('quiz-result').hidden = !done;
+    if (done) {
+      renderResult();
+      if (moveFocus) $('res-title').focus({ preventScroll: true });
+      return;
+    }
+    var q = QUESTIONS[step];
+    var pct = Math.round((step / QUESTIONS.length) * 100) + '%';
+    $('quiz-count').textContent = 'Pregunta ' + (step + 1) + ' de ' + QUESTIONS.length;
+    $('quiz-pct').textContent = pct;
+    $('quiz-bar').style.width = pct;
+    $('quiz-title').textContent = q.title;
+    $('quiz-q').className = 'quiz-q ' + (step % 2 ? 'q-anim-a' : 'q-anim-b');
+    $('quiz-back').hidden = step === 0;
+
+    var opts = $('quiz-opts');
+    opts.textContent = '';
+    q.options.forEach(function (o) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'quiz-opt' + (answers[q.key] === o.id ? ' is-picked' : '');
+      var label = document.createElement('span');
+      label.textContent = o.label;
+      var ico = document.createElement('span');
+      ico.className = 'opt-ico';
+      ico.innerHTML = ARROW;
+      b.appendChild(label);
+      b.appendChild(ico);
+      b.addEventListener('click', function () { answers[q.key] = o.id; step++; renderQuiz(true); });
+      opts.appendChild(b);
+    });
+    if (moveFocus) $('quiz-title').focus({ preventScroll: true });
+  }
+
+  $('quiz-back').addEventListener('click', function () { step = Math.max(0, step - 1); renderQuiz(true); });
+  $('quiz-reset').addEventListener('click', function () { step = 0; answers = {}; renderQuiz(true); });
+  renderQuiz(false);
+})();
+</script>
+</body>
+</html>
