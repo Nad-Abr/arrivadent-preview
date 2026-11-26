@@ -556,8 +556,8 @@ img,svg,canvas{display:block}
     </div>
     <div class="holo rv" id="holo" style="--d:.1s" aria-hidden="true">
       <canvas id="holo3d"></canvas>
-      <span class="hud hud-tl"><i></i>Revisión completa</span>
-      <span class="hud hud-tr" id="hudScan">Escaneo 000%</span>
+      <span class="hud hud-tl"><i></i>Implante dental</span>
+      <span class="hud hud-tr" id="hudScan">Montaje 0%</span>
       <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
       <div class="panel panel-gauge">
         <small>Plan</small>
@@ -565,12 +565,12 @@ img,svg,canvas{display:block}
         <small>Personalizado</small>
       </div>
       <div class="panel panel-check">
-        <small>Valoramos</small>
+        <small>Montaje</small>
         <ul id="checks">
-          <li>Encías <i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0E0E0F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></i></li>
-          <li>Esmalte <i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0E0E0F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></i></li>
-          <li>Mordida <i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0E0E0F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></i></li>
-          <li>Raíces <i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0E0E0F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></i></li>
+          <li>Implante <i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0E0E0F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></i></li>
+          <li>Pilar <i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0E0E0F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></i></li>
+          <li>Corona <i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0E0E0F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></i></li>
+          <li>Ajuste <i><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#0E0E0F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></i></li>
         </ul>
       </div>
       <div class="ruler"></div>
@@ -853,19 +853,10 @@ img,svg,canvas{display:block}
     b.addEventListener('pointerleave', function () { b.style.setProperty('--mx', '0px'); b.style.setProperty('--my', '0px'); });
   });
 
-  /* holo checklist + scan counter */
-  var checks = $('checks').children, holo = $('holo'), hud = $('hudScan'), ci = 0, scanPct = 0, holoVisible = false;
-  new IntersectionObserver(function (es) { holoVisible = es[0].isIntersecting; }, { threshold: 0.2 }).observe(holo);
-  setInterval(function () {
-    if (!holoVisible) return;
-    if (ci < checks.length) { checks[ci].classList.add('ok'); ci++; }
-    else { Array.prototype.forEach.call(checks, function (li) { li.classList.remove('ok'); }); ci = 0; }
-  }, 900);
-  setInterval(function () {
-    if (!holoVisible) return;
-    scanPct = (scanPct + 1) % 101;
-    hud.textContent = 'Escaneo ' + scanPct + '%';
-  }, 60);
+  /* holo fallback: if 3D never starts, show the finished checklist */
+  setTimeout(function () {
+    if (!document.body.classList.contains('has-holo')) Array.prototype.forEach.call($('checks').children, function (li) { li.classList.add('ok'); });
+  }, 5000);
 
   /* smile spark along path */
   var cta = $('contacto'), path = $('smilePath'), spark = $('spark'), smileBox = spark.parentNode;
@@ -1038,14 +1029,23 @@ function toothSDF(x, y, z) {
   }
   return d;
 }
-function buildToothGeometry(res) {
+// implant crown: the molar crown without roots, flat underneath
+function crownSDF(x, y, z) {
+  let d = sdEllipsoid(x, y - 0.26, z, 0.53, 0.35, 0.47);
+  for (const [cx, cz] of [[0.22, 0.19], [-0.22, 0.19], [0.22, -0.19], [-0.22, -0.19]]) d = smin(d, len3(x - cx, y - 0.5, z - cz) - 0.2, 0.16);
+  d = smax(d, -(len3(x, (y - 0.74) * 1.2, z) - 0.17), 0.12);
+  d = smax(d, -sdEllipsoid(x, y - 0.7, z, 0.06, 0.12, 0.5), 0.08);
+  d = smin(d, sdEllipsoid(x, y + 0.02, z, 0.42, 0.2, 0.38), 0.12);
+  return smax(d, -(y + 0.06), 0.04);
+}
+function buildToothGeometry(res, sdf = toothSDF) {
   const mc = new MarchingCubes(res, new THREE.MeshBasicMaterial(), false, false, 400000);
   mc.isolation = 0;
   mc.reset();
   const half = res / 2, S = 1.12; // world scale of the field box
   for (let k = 0; k < res; k++) for (let j = 0; j < res; j++) for (let i = 0; i < res; i++) {
     const x = (i - half) / half * S, y = (j - half) / half * S, z = (k - half) / half * S;
-    mc.field[i + j * res + k * res * res] = -toothSDF(x, y, z);
+    mc.field[i + j * res + k * res * res] = -sdf(x, y, z);
   }
   mc.update();
   const n = mc.count;
@@ -1148,82 +1148,138 @@ addEventListener('pointermove', e => { pointer.tx = e.clientX / innerWidth * 2 -
   loop();
 })();
 
-/* ═════ TECH: holographic wireframe tooth with scan band ═════ */
+/* ═════ TECH: holographic dental implant that assembles itself ═════ */
 (function holo() {
   const canvas = document.getElementById('holo3d');
   const renderer = makeRenderer(canvas);
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 50);
-  camera.position.set(0, 0.2, 6.6);
-  camera.lookAt(0, 0.05, 0);
+  camera.position.set(0, small ? 0.2 : 0.25, small ? 8.4 : 7.3);
+  camera.lookAt(0, small ? -0.05 : 0.1, 0);
 
-  const geo = buildToothGeometry(small ? 34 : 44);
-  const uniforms = { uTime: { value: 0 }, uScan: { value: 0 } };
+  const uniforms = { uScan: { value: 0 }, uFlash: { value: 0 } };
   const vs = `
     varying vec3 vN; varying vec3 vV; varying float vY;
     void main(){
       vec4 wp = modelMatrix * vec4(position,1.0);
-      vY = position.y;
+      vY = wp.y;
       vN = normalize(normalMatrix * normal);
       vec4 mv = viewMatrix * wp;
       vV = normalize(-mv.xyz);
       gl_Position = projectionMatrix * mv;
     }`;
   const fsShell = `
-    uniform float uScan; varying vec3 vN; varying vec3 vV; varying float vY;
+    uniform float uScan; uniform float uFlash; varying vec3 vN; varying vec3 vV; varying float vY;
     void main(){
       float fr = pow(1.0 - abs(dot(vN, vV)), 2.2);
       float band = smoothstep(0.09, 0.0, abs(vY - uScan));
-      float a = fr * 0.55 + band * 0.35;
-      gl_FragColor = vec4(vec3(1.0), a);
+      gl_FragColor = vec4(vec3(1.0), fr * (0.5 + uFlash * 0.5) + band * 0.35);
     }`;
   const fsWire = `
-    uniform float uScan; varying vec3 vN; varying vec3 vV; varying float vY;
+    uniform float uScan; uniform float uFlash; varying float vY;
     void main(){
       float band = smoothstep(0.12, 0.0, abs(vY - uScan));
       float below = step(vY, uScan);
-      float a = 0.035 + below * 0.06 + band * 0.7;
-      gl_FragColor = vec4(vec3(1.0), a);
+      gl_FragColor = vec4(vec3(1.0), 0.04 + below * 0.06 + band * 0.7 + uFlash * 0.25);
     }`;
-  const shell = new THREE.Mesh(geo, new THREE.ShaderMaterial({ uniforms, vertexShader: vs, fragmentShader: fsShell, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide }));
-  const wire = new THREE.Mesh(geo, new THREE.ShaderMaterial({ uniforms, vertexShader: vs, fragmentShader: fsWire, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, wireframe: true }));
-  const group = new THREE.Group(); group.add(shell, wire); group.position.y = 0.1; scene.add(group);
+  const shellMat = new THREE.ShaderMaterial({ uniforms, vertexShader: vs, fragmentShader: fsShell, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide });
+  const wireMat = new THREE.ShaderMaterial({ uniforms, vertexShader: vs, fragmentShader: fsWire, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, wireframe: true });
+  const holoPart = geo => { const g = new THREE.Group(); g.add(new THREE.Mesh(geo, shellMat), new THREE.Mesh(geo, wireMat)); return g; };
 
-  // scan plane
-  const planeEdge = new THREE.Mesh(new THREE.TorusGeometry(1.25, 0.004, 6, 160), new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.85 }));
+  // ── implant body (screw): tapered core + helical thread ──
+  const coreR = y => 0.235 - 0.075 * Math.min(1, Math.max(0, (-y - 0.12) / 1.0));
+  const prof = [[0, 0], [0.24, 0], [0.26, -0.04], [0.25, -0.12]];
+  for (let y = -0.2; y >= -1.12; y -= 0.08) prof.push([coreR(y), y]);
+  prof.push([0.13, -1.2], [0.08, -1.27], [0, -1.3]);
+  const coreGeo = new THREE.LatheGeometry(prof.map(([r, y]) => new THREE.Vector2(r, y)), small ? 28 : 40);
+  class Helix extends THREE.Curve {
+    getPoint(t, v = new THREE.Vector3()) {
+      const y = -0.16 - t * 0.98, a = t * Math.PI * 2 * 8.5, r = coreR(y) + 0.012;
+      return v.set(Math.cos(a) * r, y, Math.sin(a) * r);
+    }
+  }
+  const threadGeo = new THREE.TubeGeometry(new Helix(), small ? 300 : 420, 0.032, 6, false);
+  const implant = new THREE.Group(); implant.add(holoPart(coreGeo), holoPart(threadGeo));
+
+  // ── abutment (connector) ──
+  const abGeo = new THREE.LatheGeometry([[0, 0], [0.2, 0], [0.225, 0.05], [0.2, 0.11], [0.155, 0.4], [0.12, 0.45], [0, 0.45]].map(([r, y]) => new THREE.Vector2(r, y)), small ? 28 : 40);
+  const abutment = holoPart(abGeo);
+
+  // ── crown ──
+  const crown = holoPart(buildToothGeometry(small ? 34 : 44, crownSDF));
+
+  const group = new THREE.Group(); group.position.y = small ? 0.5 : 0.12;
+  group.add(implant, abutment, crown); scene.add(group);
+
+  // assembled positions
+  const AB_Y = 0.0, CR_Y = 0.13, AB_UP = 0.34, CR_UP = 0.68;
+
+  // gum line ring (where the implant sits) + scan ring
+  const gum = new THREE.Mesh(new THREE.TorusGeometry(0.62, 0.003, 6, 120), new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.35 }));
+  gum.rotation.x = Math.PI / 2; gum.position.y = group.position.y - 0.02; scene.add(gum);
+  const planeEdge = new THREE.Mesh(new THREE.TorusGeometry(1.1, 0.004, 6, 160), new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.8 }));
   planeEdge.rotation.x = Math.PI / 2; scene.add(planeEdge);
 
   // base rings
-  const base = new THREE.Group(); base.position.y = -1.25; scene.add(base);
+  const base = new THREE.Group(); base.position.y = -1.3; scene.add(base);
   [1.0, 1.35, 1.7].forEach((r, i) => {
     const m = new THREE.Mesh(new THREE.TorusGeometry(r, 0.003, 6, 180), new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.35 - i * 0.1 }));
     m.rotation.x = Math.PI / 2; base.add(m);
   });
   // floating particles
   const pts = new Float32Array(260 * 3);
-  for (let i = 0; i < 260; i++) { const a = Math.random() * Math.PI * 2, r = 1.2 + Math.random() * 1.4; pts.set([Math.cos(a) * r, -1.2 + Math.random() * 2.8, Math.sin(a) * r], i * 3); }
+  for (let i = 0; i < 260; i++) { const a = Math.random() * Math.PI * 2, r = 1.2 + Math.random() * 1.4; pts.set([Math.cos(a) * r, -1.2 + Math.random() * 3, Math.sin(a) * r], i * 3); }
   const pg = new THREE.BufferGeometry(); pg.setAttribute('position', new THREE.BufferAttribute(pts, 3));
   const particles = new THREE.Points(pg, new THREE.PointsMaterial({ color: 0xffffff, size: 0.018, transparent: true, opacity: 0.5 }));
   scene.add(particles);
 
+  // checklist + HUD driven by the assembly timeline
+  const checks = Array.from(document.getElementById('checks').children);
+  const hud = document.getElementById('hudScan');
+  let lastState = '', lastPct = -1;
+  function setChecks(n) {
+    const key = String(n); if (key === lastState) return; lastState = key;
+    checks.forEach((li, i) => li.classList.toggle('ok', i < n));
+  }
+  const ease = x => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+  const seg = (p, a, b) => Math.min(1, Math.max(0, (p - a) / (b - a)));
+
   const isVisible = whenVisible(canvas, v => { if (v) loop(); });
   const ro = new ResizeObserver(() => fit(renderer, camera, canvas)); ro.observe(canvas);
   fit(renderer, camera, canvas);
+  document.body.classList.add('has-holo');
 
-  const clock = new THREE.Clock(); let running = false;
+  const PERIOD = 8; const clock = new THREE.Clock(); let running = false;
   function loop() {
     if (running) return; running = true;
     (function frame() {
       if (!isVisible()) { running = false; return; }
       const t = clock.getElapsedTime();
-      const s = (Math.sin(t * 0.9) * 0.5 + 0.5);          // 0..1
-      const yWorld = -0.95 + s * 1.9;                      // scan height in group space
-      uniforms.uScan.value = (yWorld - group.position.y) / 1; // geometry is unscaled in y
+      const p = reduce ? 0.75 : (t % PERIOD) / PERIOD;
+
+      // timeline: 0–.12 parts apart · .12–.32 abutment in · .32–.55 crown in · .55–.62 fit · .62–.88 hold · .88–1 apart again
+      const apart = ease(seg(p, 0.88, 1));
+      const ab = 1 - ease(seg(p, 0.12, 0.32)) + apart;
+      const cr = 1 - ease(seg(p, 0.32, 0.55)) + apart;
+      abutment.position.y = AB_Y + AB_UP * Math.min(1, ab);
+      crown.position.y = CR_Y + CR_UP * Math.min(1, cr);
+      crown.rotation.y = Math.min(1, cr) * Math.PI * 0.75;
+      const fit01 = seg(p, 0.55, 0.62);
+      uniforms.uFlash.value = fit01 > 0 && fit01 < 1 ? Math.sin(fit01 * Math.PI) : 0;
+
+      const n = p < 0.06 ? 0 : p < 0.32 ? 1 : p < 0.55 ? 2 : p < 0.62 ? 3 : p < 0.88 ? 4 : 0;
+      setChecks(n);
+      const pct = p >= 0.88 ? 0 : Math.round(Math.min(1, p / 0.62) * 100);
+      if (pct !== lastPct) { hud.textContent = 'Montaje ' + pct + '%'; lastPct = pct; }
+
+      const s = Math.sin(t * 0.9) * 0.5 + 0.5;
+      const yWorld = -1.05 + s * 2.3;
+      uniforms.uScan.value = yWorld;
       planeEdge.position.y = yWorld;
-      const sc = 0.55 + 0.45 * Math.sin(Math.acos(Math.min(1, Math.abs(yWorld - 0.1) / 1.3)));
-      planeEdge.scale.setScalar(sc);
-      group.rotation.y = (reduce ? 0.8 : t * 0.4) + pointer.x * 0.3;
-      group.rotation.x = 0.1 + pointer.y * 0.1;
+      planeEdge.scale.setScalar(0.55 + 0.45 * Math.sin(Math.acos(Math.min(1, Math.abs(yWorld - 0.15) / 1.4))));
+
+      group.rotation.y = (reduce ? 0.6 : t * 0.35) + pointer.x * 0.3;
+      group.rotation.x = 0.08 + pointer.y * 0.08;
       base.rotation.y = -t * 0.2;
       particles.rotation.y = t * 0.05;
       renderer.render(scene, camera);
